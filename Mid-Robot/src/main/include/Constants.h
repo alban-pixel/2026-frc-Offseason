@@ -60,4 +60,10 @@ namespace VisionConstants {
 
 inline constexpr std::string_view kLimelightName{"limelight"};
 
+inline constexpr double kCameraFacingSign = -1.0;
+inline constexpr double kCameraOrientationSign = -1.0;
+
+inline constexpr double kTXSign = kCameraFacingSign * kCameraOrientationSign;
+inline constexpr double kTYSign = kCameraOrientationSign;
+
 } // namespace VisionConstants

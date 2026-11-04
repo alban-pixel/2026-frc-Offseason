@@ -38,8 +38,8 @@ int SubLimelight::getTagID() const {
 
 void SubLimelight::Periodic() {
   mHasTarget = mTVSub.Get() >= 1.0;
-  mTX = mTXSub.Get();
-  mTY = mTYSub.Get();
+  mTX = VisionConstants::kTXSign * mTXSub.Get();
+  mTY = VisionConstants::kTYSign * mTYSub.Get();
   mTA = mTASub.Get();
   mTagID = static_cast<int>(mTIDSub.Get());
 
@@ -52,6 +52,8 @@ void SubLimelight::Periodic() {
   frc::SmartDashboard::PutBoolean("Limelight/HasTarget", mHasTarget);
   frc::SmartDashboard::PutNumber("Limelight/TXDeg", mTX);
   frc::SmartDashboard::PutNumber("Limelight/TYDeg", mTY);
+  frc::SmartDashboard::PutNumber("Limelight/TXCamDeg", mTXSub.Get());
+  frc::SmartDashboard::PutNumber("Limelight/TYCamDeg", mTYSub.Get());
   frc::SmartDashboard::PutNumber("Limelight/TAPercent", mTA);
   frc::SmartDashboard::PutNumber("Limelight/TagID", mTagID);
 }
