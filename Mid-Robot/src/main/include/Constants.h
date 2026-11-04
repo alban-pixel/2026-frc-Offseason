@@ -28,7 +28,7 @@ inline constexpr int kPigeon2 = 0;
 
 namespace CarDriveConstants {
 
-inline constexpr double kSpeedScale = 0.5;
+inline constexpr double kSpeedScale = 0.8;
 inline constexpr units::angle::degree_t kMaxSteerAngle{60.0_deg};
 inline constexpr double kSteerGearRatio = 150.0 / 7.0;
 
@@ -48,8 +48,8 @@ inline constexpr units::angle::turn_t kFRMagnetOffset{0.0_tr};
 
 inline constexpr bool kFLDriveInverted = true;
 inline constexpr bool kFRDriveInverted = true;
-inline constexpr bool kFLSteerInverted = false;
-inline constexpr bool kFRSteerInverted = false;
+inline constexpr bool kFLSteerInverted = true;
+inline constexpr bool kFRSteerInverted = true;
 
 inline constexpr double kDriftTorqueVectorScale = 1.25;
 inline constexpr double kDriftInnerScale = 0.4;
@@ -60,8 +60,8 @@ namespace VisionConstants {
 
 inline constexpr std::string_view kLimelightName{"limelight"};
 
-inline constexpr double kCameraFacingSign = -1.0;
-inline constexpr double kCameraOrientationSign = -1.0;
+inline constexpr double kCameraFacingSign = 1.0;
+inline constexpr double kCameraOrientationSign = 1.0;
 
 inline constexpr double kTXSign = kCameraFacingSign * kCameraOrientationSign;
 inline constexpr double kTYSign = kCameraOrientationSign;
