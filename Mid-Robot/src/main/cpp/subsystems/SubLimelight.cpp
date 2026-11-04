@@ -12,6 +12,8 @@ SubLimelight::SubLimelight() {
   mTYSub = mTable->GetDoubleTopic("ty").Subscribe(0.0);
   mTASub = mTable->GetDoubleTopic("ta").Subscribe(0.0);
   mTIDSub = mTable->GetDoubleTopic("tid").Subscribe(-1.0);
+
+  frc::SmartDashboard::SetDefaultNumber("Vision/SteerToTargetScale", 1.0);
 }
 
 bool SubLimelight::hasTarget() const {
